@@ -32,5 +32,5 @@
 			}
 		]
 	},
-	"ignorePatterns": ["next.config.js"]
+	"ignorePatterns": ["next.config.js", "lint-staged.config.js"]
 }
