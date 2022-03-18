@@ -6,7 +6,9 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "npx eslint .",
+		"format": "prettier -w .",
+		"validate": "npx tsc --noEmit &&  npx eslint . && npx prettier --write ."
 	},
 	"dependencies": {
 		"@chakra-ui/react": "^1.8.6",
