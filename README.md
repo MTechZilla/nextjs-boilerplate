@@ -7,4 +7,3 @@ Use this command to create new nextjs project
 ```bash
 npx create-next-app --use-npm --example "https://github.com/MTechZilla/nextjs-starter" web
 ```
-

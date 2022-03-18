@@ -1,11 +1,12 @@
-import Axios from "axios";
 import type { Method } from "axios";
+import Axios, { AxiosInstance } from "axios";
+
 const timeoutInMilliSeconds = 100000;
 
 export const $axiosV1 = Axios.create({
 	headers: {
 		"Content-Type": "application/json;charset=UTF-8",
-		apiKey: process.env.NEXT_PUBLIC_API_KEY,
+		apiKey: process.env.NEXT_PUBLIC_API_KEY || "",
 		client: "web",
 	},
 	timeout: timeoutInMilliSeconds,
@@ -14,14 +15,14 @@ export const $axiosV1 = Axios.create({
 });
 
 const invokeApi = async (
-	axiosInstance: Function,
+	axiosInstance: AxiosInstance,
 	path: string,
 	method: Method = "GET",
 	body: object = {}
 ) => {
 	try {
 		const instance = await axiosInstance({
-			method: method,
+			method,
 			url: path,
 			data: JSON.stringify(body),
 		});

@@ -12,8 +12,8 @@ const useMutationHandler = <TData, TError, TVariables>(
 		TError,
 		TVariables
 	>((values: TVariables) => fetcher(values), {
-		onSuccess: (data: TPostResponse<TData>) => {
-			const respStatus = data?.status;
+		onSuccess: (TRespData: TPostResponse<TData>) => {
+			const respStatus = TRespData?.status;
 			if (respStatus) {
 				invalidators?.forEach((invalidator: string) => {
 					if (removeQuery) {

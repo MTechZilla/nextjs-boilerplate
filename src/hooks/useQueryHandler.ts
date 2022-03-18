@@ -1,12 +1,12 @@
-import { useQuery } from "react-query";
 import type { QueryFunction, QueryKey } from "react-query";
-import { TResponse } from "../types/index";
+import { useQuery } from "react-query";
+import { TQueryResponse } from "../types/index";
 
 const useQueryHandler = <TData, TError>(
 	key: QueryKey,
-	fetcher: QueryFunction<TResponse<TData>>
+	fetcher: QueryFunction<TQueryResponse<TData>>
 ) => {
-	const { data, isLoading, isError, error, isSuccess } = useQuery<TResponse<TData>, TError>(
+	const { data, isLoading, isError, error, isSuccess } = useQuery<TQueryResponse<TData>, TError>(
 		key,
 		fetcher,
 		{

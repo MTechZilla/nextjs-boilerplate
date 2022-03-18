@@ -1,18 +1,15 @@
 import BasicLayout from "@/components/BasicLayout";
-import { Heading, Text, Flex } from "@chakra-ui/react";
-import type { NextPage } from "next";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 
-const Home: NextPage = () => {
+function Home() {
 	return (
-		<>
-			<BasicLayout>
-				<Flex h="50vh" w="100%" direction="column" justify="center" align="center">
-					<Heading>Mtechzilla</Heading>
-					<Text>Nextjs boilerplate</Text>
-				</Flex>
-			</BasicLayout>
-		</>
+		<BasicLayout>
+			<Flex h="50vh" w="100%" direction="column" justify="center" align="center">
+				<Heading>Mtechzilla</Heading>
+				<Text>Nextjs boilerplate</Text>
+			</Flex>
+		</BasicLayout>
 	);
-};
+}
 
 export default Home;

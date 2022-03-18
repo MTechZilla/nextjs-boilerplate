@@ -1,3 +1,11 @@
 // TODO: define types depending on project requirement
-export type TPostResponse<T> = any;
-export type TResponse<T> = any;
+export type TPostResponse<T> = {
+	status: boolean;
+	message: T;
+};
+
+// TODO: define types depending on project requirement
+export type TQueryResponse<T> = {
+	status: boolean;
+	message: T;
+};
